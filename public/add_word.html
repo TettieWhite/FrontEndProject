@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div class="bg-modal">
+    <div class="add-word-form">
+        <h1>Add new word</h1>
+
+        <p id="warning" class = "warning">User with this email already exists</p>
+
+        <div class="word_field">
+            <input type="text" placeholder="Word" id="word_field" required>
+        </div>
+
+        <div class="definition_field">
+            <textarea placeholder="Definition" id="definition_field"></textarea>
+        </div>
+
+        <div class="add-btn">
+            <button class="add-word-btn" onclick="addWord(`${document.getElementById('word_field').value}`,
+                           `${document.getElementById('definition_field').value}`,
+                           new Date(),
+                           `${logUser.user_id}`)">Add new word</button>
+            <button class="cancel-btn">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
