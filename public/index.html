@@ -1,0 +1,106 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+
+<div class="top clearfix">
+  <div class="login-reg-container">
+    <a class="login-reg-btn" href="register.html">Register</a>
+    <a class="login-reg-btn" href="login.html">Login</a>
+  </div>
+</div>
+
+<header class="header">
+  <nav class="navbar clearfix">
+    <button class="mobile-menu-btn" >Menu</button>
+    <a class="logo" href="/">Community-driven<br>dictionary</a>
+
+    <ul class="menu clearfix">
+      <li class="active">
+        <a href="/">Main page</a>
+      </li>
+      <li>
+        <a href="/">Word of the day</a>
+      </li>
+      <li>
+        <a href="add_word.html">Add new word</a>
+      </li>
+      <li class="sub-menu-link">
+        <a >Sort words by...</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="/">rating</a>
+          </li>
+          <li>
+            <a href="/">creation date</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </nav>
+</header>
+
+<div class="main">
+  <div class="word-template">
+    <div class="word-header">
+      <div class="word">Word</div>
+      <div class="clearfix">
+        <div class="day-word" style="display: block">
+          <a>word of the day</a>
+          <i class="fas fa-crown"></i>
+        </div>
+      </div>
+    </div>
+    <div class="definition">a long long definition of the word with some examples blah blah blah you just need to know it's a long sentence</div>
+    <div class="user-date">by <span class="user">user</span>, date</div>
+    <div class="word-footer">
+      <div class="vote">
+        <a class="vote-up">
+          <i class="fas fa-thumbs-up"></i>
+          <span>243</span>
+        </a>
+        <a class="vote-down">
+          <i class="fas fa-thumbs-down"></i>
+          <span>18</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODO   remove a bit later and do cycle properly-->
+  <div class="word-template not-day-word">
+    <div class="word-header">
+      <div class="word">Word</div>
+      <div class="clearfix">
+        <div class="day-word">
+          <a>word of the day</a>
+          <i class="fas fa-crown"></i>
+        </div>
+      </div>
+    </div>
+    <div class="definition">a long long definition of the word with some examples blah blah blah you just need to know it's a long sentence</div>
+    <div class="user-date">by <span class="user">user</span>, date</div>
+    <div class="word-footer">
+      <div class="vote">
+        <a class="vote-up">
+          <i class="fas fa-thumbs-up"></i>
+          <span>243</span>
+        </a>
+        <a class="vote-down">
+          <i class="fas fa-thumbs-down"></i>
+          <span>18</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
