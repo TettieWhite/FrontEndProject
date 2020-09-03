@@ -1,0 +1,88 @@
+.add-word-form {
+    width: 670px;
+    margin: 150px auto 0 auto;
+    color: white;
+}
+
+.add-word-form h1 {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #3cce7b;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.warning {
+    color: #f66;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: none;
+}
+
+.word_field, .definition_field {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #3cce7b;
+}
+
+textarea {
+    height: 150px;
+    resize:none;
+}
+
+.word_field input, .definition_field textarea {
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    float: left;
+    margin: 0 10px;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.add-btn {
+    display: inline-block;
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.add-word-btn, .cancel-btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 330px;
+    background: none;
+    color: white;
+    margin: 18px 0;
+    font-size: 20px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background .4s;
+}
+
+.add-word-btn {
+    border: 2px solid #3cce7b;
+}
+
+.cancel-btn {
+    border: 2px solid #ff6666;
+}
+
+.add-word-btn:hover {
+    background: #3cce7b;
+}
+
+.cancel-btn:hover {
+    background: #ff6666;
+}

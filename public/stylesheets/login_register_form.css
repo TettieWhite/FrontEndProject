@@ -1,0 +1,99 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+.login-form {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 350;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.warning {
+    color: #f66;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: none;
+}
+
+.auth-reg {
+    color: #3cce7b;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: none;
+}
+
+.login-form h1 {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #3cce7b;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.data_field {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #3cce7b;
+}
+
+.data_field i {
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.data_field input {
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.login-reg-btn {
+    width: 100%;
+    background: none;
+    border: 2px solid #3cce7b;
+    color: white;
+    margin: 18px 0;
+    font-size: 20px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background .4s;
+}
+
+.login-reg-btn:hover {
+    background: #3cce7b;
+}
+
+.login-reg-ref {
+    cursor: pointer;
+}
+
+.login-reg-ref:hover {
+    color: #3cce7b;
+}
