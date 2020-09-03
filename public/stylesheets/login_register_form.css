@@ -97,3 +97,23 @@
 .login-reg-ref:hover {
     color: #3cce7b;
 }
+
+@media (max-width: 960px)
+{
+    .login-form {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    .login-form h1 {
+        font-size: 26px;
+    }
+
+    .login-form * {
+        font-size: 14px;
+    }
+
+}

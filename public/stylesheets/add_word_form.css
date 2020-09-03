@@ -86,3 +86,24 @@ textarea {
 .cancel-btn:hover {
     background: #ff6666;
 }
+
+@media (max-width: 960px)
+{
+    .add-word-form {
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .add-word-form h1 {
+        font-size: 26px;
+    }
+
+    .add-word-form * {
+        font-size: 14px;
+    }
+
+    .cancel-btn, .add-word-btn {
+        width: 90%;
+        margin: 10px;
+    }
+}
