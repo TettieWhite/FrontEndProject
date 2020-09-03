@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div class="bg-modal">
+    <span class="close">&times</span>
+    <div class="login-form" id="registration-form">
+        <h1>Register</h1>
+        <p id="warning" class = "warning">User with this email already exists</p>
+        <p id="auth-reg" class = "auth-reg">User is logged in</p>
+
+        <div class="data_field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" id="username_field" required>
+        </div>
+
+        <div class="data_field">
+            <i class="fas fa-at"></i>
+            <input type="email" placeholder="Email" id="email_field" required>
+        </div>
+
+        <div class="data_field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="password_field" required>
+        </div>
+
+        <div class="data_field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password confirmation" id="password_confirm_field" required>
+        </div>
+
+        <button class="login-reg-btn">Register</button>
+        <a class="login-reg-ref" href="login.html">Already have an account?</a>
+    </div>
+</div>
+
+
+</body>
+</html>
