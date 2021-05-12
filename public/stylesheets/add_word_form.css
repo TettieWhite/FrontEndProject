@@ -21,6 +21,14 @@
     display: none;
 }
 
+.auth-reg {
+    color: #3cce7b;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: none;
+}
+
 .word_field, .definition_field {
     width: 100%;
     overflow: hidden;

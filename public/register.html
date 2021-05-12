@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="/stylesheets/login_register_form.css">
 </head>
 <body>
+<script src="/javascripts/cdd-client.js"></script>
 
 <div class="bg-modal">
-    <span class="close">&times</span>
+    <span class="close" onclick="window.location.replace('/')">&times</span>
     <div class="login-form" id="registration-form">
         <h1>Register</h1>
         <p id="warning" class = "warning">User with this email already exists</p>
@@ -36,7 +37,8 @@
             <input type="password" placeholder="Password confirmation" id="password_confirm_field" required>
         </div>
 
-        <button class="login-reg-btn" >Register</button>
+        <button class="login-reg-btn" onclick="registerUser(`${document.getElementById('username_field').value}`,
+         `${document.getElementById('email_field').value}`, `${document.getElementById('password_field').value}`)">Register</button>
         <a class="login-reg-ref" href="login.html">Already have an account?</a>
     </div>
 </div>

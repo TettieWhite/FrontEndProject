@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="/stylesheets/login_register_form.css">
 </head>
 <body>
+    <script src="/javascripts/cdd-client.js"></script>
 
 <div class="bg-modal">
-    <span class="close">&times</span>
+    <span class="close" onclick="window.location.replace('/')">&times</span>
     <div class="login-form" id="login-form">
 
         <h1>Login</h1>
@@ -27,7 +28,7 @@
             <input type="password" placeholder="Password" id="password_field" required>
         </div>
 
-        <button class="login-reg-btn">Log in</button>
+        <button class="login-reg-btn" onclick="loginUser(`${document.getElementById('username_field').value}`, `${document.getElementById('password_field').value}`)">Log in</button>
         <a class="login-reg-ref" href="register.html">Don't have an account?</a>
     </div>
 </div>

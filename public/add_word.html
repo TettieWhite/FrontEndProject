@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="/stylesheets/add_word_form.css">
 </head>
 <body>
+<script src="/javascripts/cdd-client.js"></script>
+
 
 <div class="bg-modal">
     <div class="add-word-form">
         <h1>Add new word</h1>
 
         <p id="warning" class = "warning">User with this email already exists</p>
+        <p id="auth-reg" class = "auth-reg">User is logged in</p>
 
         <div class="word_field">
             <input type="text" placeholder="Word" id="word_field" required>
@@ -24,8 +27,10 @@
         </div>
 
         <div class="add-btn">
-            <button class="add-word-btn">Add new word</button>
-            <button class="cancel-btn">Cancel</button>
+            <button class="add-word-btn" onclick="addWord(`${document.getElementById('word_field').value}`,
+                `${document.getElementById('definition_field').value}`,
+                new Date().toISOString().split('T')[0])">Add new word</button>
+            <button class="cancel-btn" onclick="window.location.replace('/')">Cancel</button>
         </div>
 
     </div>

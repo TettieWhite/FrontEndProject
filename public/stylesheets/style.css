@@ -6,7 +6,12 @@
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
+  min-height: 100%;
   background: url(../images/background.jpg) no-repeat top left fixed;
   background-size: cover;
   color:white;
@@ -28,6 +33,10 @@ body .top {
 .login-reg-container {
   float: right;
   margin-right: 10px;
+}
+
+#logout, #username {
+  display: none;
 }
 
 .login-reg-btn {
@@ -61,11 +70,19 @@ body .clearfix:after {
   display: none;
 }
 
+@font-face {
+  font-family: "Dita Sweet";
+  src: url("../fonts/dita-sweet/dita-sweet.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .logo {
   margin: -10px 0 -10px 70px;
   float: left;
   background-color: #ff6666;
-  font-size: 30px;
+  font: 30px "Dita Sweet";
+  font-weight: 300;
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
@@ -103,6 +120,12 @@ li {
 .active {
   background: #ff6666;
 }
+
+#my-words {
+  display: none;
+}
+
+
 
   body a {
     text-decoration: none;
@@ -258,9 +281,28 @@ body .sub-menu a:hover {
   background: #ff6666;
 }
 
+.active-vote-up {
+  background: #3cce7b;
+}
+
+.active-vote-down {
+  background: #ff6666;
+}
+
 .vote i {
   font-size: 14px;
   padding-right: 10px;
+}
+
+
+.main {
+  min-height: calc(100vh - 335px);
+}
+
+.footer {
+  background-color: rgba(0,0,0,0.9);
+  padding: 25px 0 25px 10%;
+  margin-top: 50px;
 }
 
 @media (max-width: 960px) {

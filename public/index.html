@@ -1,17 +1,61 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Express</title>
+    <title>Community-driven dictionary</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
+    <script src="/javascripts/cdd-client.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            let user_id = localStorage.getItem('user_id');
+            wordsList('.words-container');
+            if (user_id){
+                document.getElementById('reg-btn').style.display = "none";
+                document.getElementById('log-btn').style.display = "none";
+                document.getElementById('logout').style.display = "inline-block";
+
+                document.getElementById('my-words').style.display = "inline-block";
+
+            }
+
+        });
+
+        function myWordsOnClick() {
+            myWordsList('.words-container');
+            document.getElementById('main-page').classList.remove('active');
+            document.getElementById('day-word').classList.remove('active');
+            document.getElementById('my-words').classList.add('active');
+        }
+
+        function addWordOnClick() {
+            let user_id = localStorage.getItem('user_id');
+            if(user_id) {
+                window.location.replace('add_word.html');
+            } else {
+                window.location.replace('login.html');
+            }
+        }
+
+        function dayWordOnClick() {
+            dayWord('.day-word-container');
+            wordsList('.words-container', false);
+            document.getElementById('main-page').classList.remove('active');
+            document.getElementById('my-words').classList.remove('active');
+            document.getElementById('day-word').classList.add('active');
+        }
 
 
+    </script>
+      
     <div class="top clearfix">
-        <div class="login-reg-container">
-        <a class="login-reg-btn" href="register.html">Register</a>
-        <a class="login-reg-btn" href="login.html">Login</a>
+        <div class="login-reg-container" id="login-reg-container">
+            <a class="login-reg-btn" href="register.html" id="reg-btn">Register</a>
+            <a class="login-reg-btn" href="login.html" id="log-btn">Login</a>
+            <div class="login-reg-btn" id="username"></div>
+            <a class="login-reg-btn" id="logout" onclick="logoutUser()">Log out</a>
         </div>
     </div>
 
@@ -21,20 +65,23 @@
         <a class="logo" href="/">Community-driven<br>dictionary</a>
 
         <ul class="menu clearfix">
-            <li class="active">
+            <li id="main-page" class="active">
                 <a href="/">Main page</a>
             </li>
             <li>
-                <a href="/">Word of the day</a>
+                <a onclick="myWordsOnClick()" id="my-words">My words</a>
             </li>
             <li>
-                <a href="add_word.html">Add new word</a>
+                <a onclick="dayWordOnClick()" id="day-word">Word of the day</a>
+            </li>
+            <li>
+                <a onclick="addWordOnClick()">Add new word</a>
             </li>
             <li class="sub-menu-link">
                 <a >Sort words by...</a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="/">rating</a>
+                        <a onclick="wordsListSortByRating('.words-container')">rating</a>
                     </li>
                     <li>
                         <a href="/">creation date</a>
@@ -46,60 +93,19 @@
     </nav>
 </header>
 
-<div class="main">
-    <div class="word-template">
-        <div class="word-header">
-            <div class="word">Word</div>
-            <div class="clearfix">
-                <div class="day-word" style="display: block">
-                    <a>word of the day</a>
-                    <i class="fas fa-crown"></i>
-                </div>
-            </div>
-        </div>
-        <div class="definition">a long long definition of the word with some examples blah blah blah you just need to know it's a long sentence</div>
-        <div class="user-date">by <span class="user">user</span>, date</div>
-        <div class="word-footer">
-            <div class="vote">
-                <a class="vote-up">
-                    <i class="fas fa-thumbs-up"></i>
-                    <span>243</span>
-                </a>
-                <a class="vote-down">
-                    <i class="fas fa-thumbs-down"></i>
-                    <span>18</span>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="main clearfix">
 
-<!-- TODO   remove a bit later and do cycle properly-->
-    <div class="word-template not-day-word">
-        <div class="word-header">
-            <div class="word">Word</div>
-            <div class="clearfix">
-                <div class="day-word">
-                    <a>word of the day</a>
-                    <i class="fas fa-crown"></i>
-                </div>
-            </div>
-        </div>
-        <div class="definition">a long long definition of the word with some examples blah blah blah you just need to know it's a long sentence</div>
-        <div class="user-date">by <span class="user">user</span>, date</div>
-        <div class="word-footer">
-            <div class="vote">
-                <a class="vote-up">
-                    <i class="fas fa-thumbs-up"></i>
-                    <span>243</span>
-                </a>
-                <a class="vote-down">
-                    <i class="fas fa-thumbs-down"></i>
-                    <span>18</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <div class="day-word-container"></div>
+
+    <div class="words-container"></div>   
+
 </div>
+
+<footer>
+    <div class="footer">
+        <p>&copy; Хилько Екатерина БГУИР ФКСиС, г. Минск, Республика Беларусь, 2021</p>
+    </div>
+</footer>
 
 </body>
 
